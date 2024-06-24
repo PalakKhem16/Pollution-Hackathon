@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+    font-family: "Playfair Display", serif;
+    color: #ffffff;
+}
+
+.team {
+    padding: 50px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.row h1 {
+    font-weight: 600;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.lorem-text {
+    font-size: 20px; /* Increase the font size as desired */
+    margin: 30px 0;
+    padding: 0 20px;
+}
+
+.column {
+    position: relative;
+    width: calc(20% - 20px);
+    min-height: 250px;
+    background: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+    .column {
+        width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .column {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 400px) {
+    .column {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.column:hover .details {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.details p {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.imbox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.imbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.column:hover .imbox img {
+    transform: scale(1.1);
+}
